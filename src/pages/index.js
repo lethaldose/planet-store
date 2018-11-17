@@ -8,8 +8,9 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogActions from '@material-ui/core/DialogActions';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import NavBar from '../components/NavBar'
 import withRoot from '../withRoot';
+import NavBar from '../components/NavBar'
+import PlanetList from '../components/PlanetList'
 
 const styles = theme => ({
   root: {
@@ -42,6 +43,7 @@ class Index extends React.Component {
     return (
       <div>
         <NavBar classes={classes}/>
+        <PlanetList/>
       </div>
     );
   }
