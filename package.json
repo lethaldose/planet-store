@@ -18,11 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-once": "CI=true yarn test",
     "eject": "react-scripts eject",
-    "test_jest": "jest --verbose --coverage",
-    "test:update": "jest --verbose --coverage --updateSnapshot",
-    "test:watch": "jest --verbose --watch",
-    "coverage": "jest --verbose --coverage && open ./coverage/lcov-report/index.html"
+    "prettier": "prettier --write '**/*.js'",
+    "lint": "eslint --max-warnings=0 src"
   },
   "browserslist": [
     ">0.2%",
@@ -34,9 +33,14 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "fetch-mock": "^7.2.5",
+    "husky": "^1.1.4",
     "jest": "^23.6.0",
     "jest-enzyme": "^7.0.1",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
     "react-test-renderer": "^16.6.3",
     "redux-mock-store": "^1.5.3",
     "sinon": "^7.1.1"

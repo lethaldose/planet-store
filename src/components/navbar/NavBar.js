@@ -7,8 +7,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
-  menuButton: {
+const styles =  theme => ({
+    menuButton:{
     marginLeft: -12,
     marginRight: 20,
   },

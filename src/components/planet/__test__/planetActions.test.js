@@ -3,11 +3,8 @@ import thunk from "redux-thunk";
 import {
   FETCH_PLANETS_ERROR,
   FETCH_PLANETS_SUCCESS,
-  fetchPlanetsSuccess,
-  fetchPlanetsError,
   fetchPlanets
 } from "../planetActions.js";
-import planetReducer from "../planetReducer";
 import fetchMock from "fetch-mock";
 import config from '../../../config';
 

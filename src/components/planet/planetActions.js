@@ -1,6 +1,6 @@
+import config from '../../config';
 export const FETCH_PLANETS_ERROR = 'FETCH_PLANETS_ERROR';
 export const FETCH_PLANETS_SUCCESS = 'FETCH_PLANETS_SUCCESS';
-import config from '../../config';
 
 // const planets = [{
 //   name: 'Mars',

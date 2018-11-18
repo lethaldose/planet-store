@@ -1,0 +1,10 @@
+{
+  "extends": ["eslint:recommended", "react-app", "prettier",  "prettier/react"],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": 0,
+  },
+}
