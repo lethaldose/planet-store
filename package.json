@@ -21,7 +21,8 @@
     "test-ci": "CI=true yarn test",
     "eject": "react-scripts eject",
     "prettier": "prettier --write '**/*.js'",
-    "lint": "eslint --max-warnings=0 src"
+    "lint": "eslint --max-warnings=0 src",
+     "precommit": "yarn lint --fix && yarn prettier"
   },
   "browserslist": [
     ">0.2%",
