@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 const Planet = (props) => {
-    console.log(props)
+    console.log('Planet props', props);
     return(
         <div>
             { props.planet ? (
@@ -18,7 +18,7 @@ const Planet = (props) => {
                     title={props.planet.name}
                     />
                     <CardContent>
-                    <Typography gutterBottom variant="headline" component="h2">
+                    <Typography gutterBottom variant="h5" component="h2">
                         {props.planet.name}
                     </Typography>
                     <Typography component="p">
