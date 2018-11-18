@@ -26,6 +26,13 @@ yarn install
 yarn start
 ```
 
+## Linting and prettifying
+
+```bash
+yarn prettier
+yarn lint
+```
+
 ## Tests
 
 ```bash
