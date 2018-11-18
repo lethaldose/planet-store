@@ -12,6 +12,13 @@ A real estate marketing site to select your dream planet.
 - yarn or npm
 - Jest
 
+## Components
+
+There are 3 components:
+- Navbar which is shown at the top of the page
+- PlanetList - container component which fetches planets from the api
+- Planet - renders planet details in a grid
+
 ## Dev
 
 ```bash

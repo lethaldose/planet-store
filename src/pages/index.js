@@ -35,7 +35,7 @@ class Index extends React.Component {
     return (
       <div>
         <NavBar classes={classes} />
-        <PlanetList />
+        <PlanetList classes={classes} />
       </div>
     );
   }

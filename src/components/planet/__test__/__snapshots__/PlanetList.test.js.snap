@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlanetList Component render planets 1`] = `
+<div>
+  <div>
+    <WithStyles(Grid)
+      container={true}
+      spacing={24}
+      style={
+        Object {
+          "padding": 24,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        key="Mars"
+        lg={4}
+        sm={6}
+        xl={3}
+        xs={12}
+      >
+        <Planet
+          planet={
+            Object {
+              "description": "The best planet",
+              "imageUrl": "https://dummy.jpeg",
+              "name": "Mars",
+              "price": Object {
+                "amount": "111.40",
+                "currency": "AUD",
+              },
+            }
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </div>
+</div>
+`;

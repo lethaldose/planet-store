@@ -1,35 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 import Planet from './Planet';
 import { fetchPlanets } from './planetActions';
 
-class PlanetList extends Component {
+export class PlanetList extends Component {
   componentWillMount() {
     this.props.fetchPlanets();
   }
 
-  onSearchInputChange = event => {
-    if (event.target.value) {
-      this.setState({ searchString: event.target.value });
-    } else {
-      this.setState({ searchString: '' });
-    }
-  };
   render() {
     const { planets } = this.props;
     return (
       <div>
-        {planets ? (
+        {planets && planets.length > 0 ? (
           <div>
-            <TextField
-              style={{ padding: 24 }}
-              id="searchInput"
-              placeholder="Search for Planet"
-              margin="normal"
-              onChange={this.onSearchInputChange}
-            />
             <Grid container spacing={24} style={{ padding: 24 }}>
               {planets.map(planet => (
                 <Grid item key={planet.name} xs={12} sm={6} lg={4} xl={3}>
@@ -39,7 +25,11 @@ class PlanetList extends Component {
             </Grid>
           </div>
         ) : (
-          'No planets found'
+          <Grid item style={{ padding: 24 }}>
+            <Typography color="error" variant="h5" component="h2">
+              No planets available!
+            </Typography>
+          </Grid>
         )}
       </div>
     );
