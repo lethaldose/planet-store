@@ -1,0 +1,6 @@
+{
+  "planetAPIEndpoint": {
+    "base": "http://localhost:3002/planet-service",
+    "planets": "/planets"
+  }
+}
