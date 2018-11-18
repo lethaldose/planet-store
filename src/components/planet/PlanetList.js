@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import {connect} from "react-redux";
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import Planet from '../components/Planet'
-import { fetchPlanets } from "../store/planetActions";
+import Planet from './Planet'
+import { fetchPlanets } from "./planetActions";
 
 class PlanetList extends Component {
     componentWillMount() {

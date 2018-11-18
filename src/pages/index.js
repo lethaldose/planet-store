@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../withRoot';
-import NavBar from '../components/NavBar'
-import PlanetList from '../components/PlanetList'
+import NavBar from '../components/navbar/NavBar'
+import PlanetList from '../components/planet/PlanetList'
 
 const styles = theme => ({
   // root: {
