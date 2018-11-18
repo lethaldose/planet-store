@@ -1,22 +1,22 @@
 # Planet Store
 
-##Description
+## Description
 
-Marketing site to showcase planets.
+A real estate marketing site to select your dream planet.
 
 ## Tech
 
-1. React (> v16.x)
-2. Material UI
-3. Node (v10.13.0)
-4. yarn or npm
-5. Jest
+- React (> v16.x)
+- Material UI
+- Node (v10.13.0)
+- yarn or npm
+- Jest
 
 ## Dev
 
 ```bash
-npm install
-npm run start
+yarn install
+yarn start
 ```
 
 ## Tests
