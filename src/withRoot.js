@@ -19,8 +19,8 @@ const theme = createMuiTheme({
     // },
   },
   typography: {
-    useNextVariants: true,
-  },
+    useNextVariants: true
+  }
 });
 
 function withRoot(Component) {

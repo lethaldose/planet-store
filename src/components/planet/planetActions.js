@@ -11,42 +11,44 @@ export const FETCH_PLANETS_SUCCESS = 'FETCH_PLANETS_SUCCESS';
 //   }
 // }];
 
-const fetchPlanetsEndpoint = `${config.planetAPIEndpoint.base}${config.planetAPIEndpoint.planets}`;
+const fetchPlanetsEndpoint = `${config.planetAPIEndpoint.base}${
+  config.planetAPIEndpoint.planets
+}`;
 
 export function fetchPlanetsSuccess(planets) {
   return {
     type: FETCH_PLANETS_SUCCESS,
-    planets,
+    planets
   };
 }
 
 export function fetchPlanetsError(message) {
   return {
     type: FETCH_PLANETS_ERROR,
-    message,
+    message
   };
 }
 
 export function fetchPlanets() {
-
   return (dispatch, getState) => {
     return fetch(fetchPlanetsEndpoint)
-    .then(resp => extractJson(resp))
-    .then(json => {
-      return dispatch(fetchPlanetsSuccess(json));
-    })
-    .catch(err => {
-      return dispatch(fetchPlanetsError(err.message));
-    });
-  }
-};
+      .then(resp => extractJson(resp))
+      .then(json => {
+        return dispatch(fetchPlanetsSuccess(json));
+      })
+      .catch(err => {
+        return dispatch(fetchPlanetsError(err.message));
+      });
+  };
+}
 
-const extractJson = (res) =>
-  res.json()
+const extractJson = res =>
+  res
+    .json()
     .then(json => [res.status, json])
     .then(([status, json]) => {
-      if(status >= 300) {
-        return Promise.reject({message: json.message});
+      if (status >= 300) {
+        return Promise.reject({ message: json.message });
       } else {
         return Promise.resolve(json);
       }
