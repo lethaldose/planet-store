@@ -2,21 +2,21 @@
 
 exports[`PlanetList Component render planets 1`] = `
 <div>
-  <div>
-    <TextField
-      id="searchInput"
-      margin="normal"
-      onChange={[Function]}
-      placeholder="Search for Planet"
-      required={false}
-      select={false}
-      style={
-        Object {
-          "padding": 24,
-        }
+  <TextField
+    id="searchInput"
+    margin="normal"
+    onChange={[Function]}
+    placeholder="Search for Planet"
+    required={false}
+    select={false}
+    style={
+      Object {
+        "padding": 24,
       }
-      variant="standard"
-    />
+    }
+    variant="standard"
+  />
+  <div>
     <WithStyles(Grid)
       container={true}
       spacing={24}

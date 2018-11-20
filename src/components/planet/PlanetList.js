@@ -19,15 +19,15 @@ export class PlanetList extends Component {
     const { planets } = this.props;
     return (
       <div>
+        <TextField
+          style={{ padding: 24 }}
+          id="searchInput"
+          placeholder="Search for Planet"
+          margin="normal"
+          onChange={this.onSearchInputChange}
+        />
         {planets && planets.length > 0 ? (
           <div>
-            <TextField
-              style={{ padding: 24 }}
-              id="searchInput"
-              placeholder="Search for Planet"
-              margin="normal"
-              onChange={this.onSearchInputChange}
-            />
             <Grid container spacing={24} style={{ padding: 24 }}>
               {planets.map(planet => (
                 <Grid item key={planet.name} xs={12} sm={6} lg={4} xl={3}>
