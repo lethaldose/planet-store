@@ -21,6 +21,12 @@ const Planet = props => {
               {props.planet.name}
             </Typography>
             <Typography component="p">{props.planet.description}</Typography>
+            <Typography component="p">
+              Price: {props.planet.price.value} {props.planet.price.currency}
+            </Typography>
+            <Typography component="p">
+              Area: {props.planet.area.value} {props.planet.price.unit}
+            </Typography>
           </CardContent>
           <CardActions>
             <Button

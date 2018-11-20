@@ -3,7 +3,9 @@ import thunk from 'redux-thunk';
 import {
   FETCH_PLANETS_ERROR,
   FETCH_PLANETS_SUCCESS,
-  fetchPlanets
+  FILTER_PLANETS,
+  fetchPlanets,
+  filterPlanets
 } from '../planetActions.js';
 import fetchMock from 'fetch-mock';
 import config from '../../../config';
@@ -67,6 +69,21 @@ describe('Planets actions', () => {
       return store.dispatch(fetchPlanets()).then(() => {
         expect(store.getActions()).toEqual(expectedActions);
       });
+    });
+  });
+
+  describe('filter planets', () => {
+    it('should filter planets by value', () => {
+      const value = 'search-string';
+      const expectedActions = [
+        {
+          type: FILTER_PLANETS,
+          value
+        }
+      ];
+      const store = mockStore({});
+      store.dispatch(filterPlanets(value));
+      expect(store.getActions()).toEqual(expectedActions);
     });
   });
 });
