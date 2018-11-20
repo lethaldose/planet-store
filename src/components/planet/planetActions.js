@@ -39,11 +39,10 @@ export function fetchPlanetsError(message) {
 
 export function fetchPlanets() {
   return (dispatch, getState) => {
-    // return dispatch(fetchPlanetsSuccess(planets));
     return fetch(fetchPlanetsEndpoint)
       .then(resp => extractJson(resp))
       .then(json => {
-        return dispatch(fetchPlanetsSuccess(json));
+        return dispatch(fetchPlanetsSuccess(json.planets));
       })
       .catch(err => {
         return dispatch(fetchPlanetsError(err.message));

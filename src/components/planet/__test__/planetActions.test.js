@@ -36,7 +36,7 @@ describe('Planets actions', () => {
     it('should get planets from api', () => {
       fetchMock.get(fetchPlanetsEndpoint, {
         status: 200,
-        body: planets
+        body: { planets }
       });
       const expectedActions = [
         {
