@@ -23,10 +23,10 @@ const PlanetCard = props => {
             </Typography>
             <Typography component="p">{props.planet.description}</Typography>
             <Typography component="p">
-              Price: {props.planet.price.value} {props.planet.price.currency}
+              Price: {props.planet.price.value} {props.planet.price.unit}
             </Typography>
             <Typography component="p">
-              Area: {props.planet.area.value} {props.planet.price.unit}
+              Area: {props.planet.area.value} {props.planet.area.unit}
             </Typography>
           </CardContent>
           <CardActions>

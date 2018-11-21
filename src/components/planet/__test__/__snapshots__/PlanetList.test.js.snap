@@ -73,7 +73,6 @@ exports[`PlanetList Component render planets 1`] = `
               >
                 Price: 
                  
-                AUD
               </p>
               <p
                 className="MuiTypography-root-163 MuiTypography-body1-172"
@@ -81,6 +80,7 @@ exports[`PlanetList Component render planets 1`] = `
                 Area: 
                 1231000.12
                  
+                sq km
               </p>
             </div>
             <div
