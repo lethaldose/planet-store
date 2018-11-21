@@ -1,7 +1,8 @@
 import {
   FETCH_PLANETS_SUCCESS,
   FETCH_PLANETS_ERROR,
-  FILTER_PLANETS
+  FILTER_PLANETS,
+  FETCH_PLANET
 } from './planetActions';
 
 function filterPlanets(action, state) {
@@ -25,7 +26,21 @@ function filterPlanets(action, state) {
   };
 }
 
-export default function(state = { originalPlanets: [], planets: [] }, action) {
+function getPlanetById(action, state) {
+  console.log(state.originalPlanets);
+  const planet = state.originalPlanets.find(
+    p => Number(p.id) === Number(action.planetId)
+  );
+  return {
+    ...state,
+    planet
+  };
+}
+
+export default function(
+  state = { originalPlanets: [], planets: [], planet: {} },
+  action
+) {
   switch (action.type) {
     case FETCH_PLANETS_SUCCESS:
       return {
@@ -40,6 +55,8 @@ export default function(state = { originalPlanets: [], planets: [] }, action) {
       };
     case FILTER_PLANETS:
       return filterPlanets(action, state);
+    case FETCH_PLANET:
+      return getPlanetById(action, state);
     default: {
       return state;
     }

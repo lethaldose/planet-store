@@ -4,13 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import withRoot from '../withRoot';
 import NavBar from '../components/navbar/NavBar';
 import PlanetList from '../components/planet/PlanetList';
+import Planet from '../components/planet/Planet';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-const styles = theme => ({
-  // root: {
-  //   textAlign: 'center',
-  //   paddingTop: theme.spacing.unit * 20,
-  // },
-});
+const styles = theme => ({});
 
 class Index extends React.Component {
   state = {
@@ -35,7 +32,12 @@ class Index extends React.Component {
     return (
       <div>
         <NavBar classes={classes} />
-        <PlanetList classes={classes} />
+        <BrowserRouter>
+          <Switch>
+            <Route path="/planet/:id" classes={classes} component={Planet} />
+            <Route path="/" component={PlanetList} classes={classes} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }

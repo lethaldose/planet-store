@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
-import Planet from './Planet';
+import PlanetCard from './PlanetCard';
 import { fetchPlanets, filterPlanets } from './planetActions';
 
 export class PlanetList extends Component {
@@ -31,7 +31,7 @@ export class PlanetList extends Component {
             <Grid container spacing={24} style={{ padding: 24 }}>
               {planets.map(planet => (
                 <Grid item key={planet.name} xs={12} sm={6} lg={4} xl={3}>
-                  <Planet planet={planet} />
+                  <PlanetCard planet={planet} />
                 </Grid>
               ))}
             </Grid>

@@ -2,6 +2,7 @@ import config from '../../config';
 export const FETCH_PLANETS_ERROR = 'FETCH_PLANETS_ERROR';
 export const FETCH_PLANETS_SUCCESS = 'FETCH_PLANETS_SUCCESS';
 export const FILTER_PLANETS = 'FILTER_PLANETS';
+export const FETCH_PLANET = 'FETCH_PLANET';
 
 const fetchPlanetsEndpoint = `${config.planetAPIEndpoint.base}${
   config.planetAPIEndpoint.planets
@@ -31,6 +32,13 @@ export function fetchPlanets() {
       .catch(err => {
         return dispatch(fetchPlanetsError(err.message));
       });
+  };
+}
+
+export function fetchPlanet(planetId) {
+  return {
+    type: FETCH_PLANET,
+    planetId
   };
 }
 

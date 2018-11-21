@@ -2,53 +2,126 @@
 
 exports[`PlanetList Component render planets 1`] = `
 <div>
-  <TextField
-    id="searchInput"
-    margin="normal"
-    onChange={[Function]}
-    placeholder="Search for Planet"
-    required={false}
-    select={false}
+  <div
+    className="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
     style={
       Object {
         "padding": 24,
       }
     }
-    variant="standard"
-  />
+  >
+    <div
+      className="MuiInputBase-root-18 MuiInput-root-5 MuiInput-underline-9 MuiInputBase-formControl-19 MuiInput-formControl-6"
+      onClick={[Function]}
+    >
+      <input
+        aria-invalid={false}
+        className="MuiInputBase-input-28 MuiInput-input-13"
+        disabled={false}
+        id="searchInput"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Search for Planet"
+        required={false}
+        type="text"
+      />
+    </div>
+  </div>
   <div>
-    <WithStyles(Grid)
-      container={true}
-      spacing={24}
+    <div
+      className="MuiGrid-container-35 MuiGrid-spacing-xs-24-59"
       style={
         Object {
           "padding": 24,
         }
       }
     >
-      <WithStyles(Grid)
-        item={true}
-        key="Mars"
-        lg={4}
-        sm={6}
-        xl={3}
-        xs={12}
+      <div
+        className="MuiGrid-item-36 MuiGrid-grid-xs-12-75 MuiGrid-grid-sm-6-83 MuiGrid-grid-lg-4-109 MuiGrid-grid-xl-3-122"
       >
-        <Planet
-          planet={
-            Object {
-              "description": "The best planet",
-              "imageUrl": "https://dummy.jpeg",
-              "name": "Mars",
-              "price": Object {
-                "amount": "111.40",
-                "currency": "AUD",
-              },
-            }
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        <div>
+          <div
+            className="MuiPaper-root-133 MuiPaper-elevation1-136 MuiPaper-rounded-134 MuiCard-root-132 planet-card"
+          >
+            <div
+              className="MuiCardMedia-root-160"
+              style={
+                Object {
+                  "backgroundImage": "url(\\"https://dummy.jpeg\\")",
+                  "height": 0,
+                  "paddingTop": "56.25%",
+                }
+              }
+              title="Mars"
+            />
+            <div
+              className="MuiCardContent-root-162"
+            >
+              <h2
+                className="MuiTypography-root-163 MuiTypography-h5-179 MuiTypography-gutterBottom-190"
+              >
+                Mars
+              </h2>
+              <p
+                className="MuiTypography-root-163 MuiTypography-body1-172"
+              >
+                The best planet
+              </p>
+              <p
+                className="MuiTypography-root-163 MuiTypography-body1-172"
+              >
+                Price: 
+                 
+                AUD
+              </p>
+              <p
+                className="MuiTypography-root-163 MuiTypography-body1-172"
+              >
+                Area: 
+                1231000.12
+                 
+              </p>
+            </div>
+            <div
+              className="MuiCardActions-root-198"
+            >
+              <a
+                className="MuiCardActions-action-199"
+                href="/planet/undefined"
+                onClick={[Function]}
+              >
+                <button
+                  className="MuiButtonBase-root-226 MuiButton-root-200 MuiButton-text-202 MuiButton-textPrimary-203 MuiButton-flat-205 MuiButton-flatPrimary-206 MuiButton-sizeSmall-223"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  tabIndex="0"
+                  type="button"
+                >
+                  <span
+                    className="MuiButton-label-201"
+                  >
+                    View Details
+                  </span>
+                  <span
+                    className="MuiTouchRipple-root-229"
+                  />
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
