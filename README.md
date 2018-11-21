@@ -14,10 +14,15 @@ A real estate marketing site to select your dream planet.
 
 ## Components
 
-There are 3 components:
+Following are the components:
 - Navbar which is shown at the top of the page
 - PlanetList - container component which fetches planets from the api
+- PlanetCard - renders planet in card list
 - Planet - renders planet details in a grid
+
+## Demo
+
+![Planet Store](./planetstore.gif)
 
 ## Dev
 
